@@ -1,0 +1,137 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #cc0000; /* Halliburton Red */
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.navbar ul li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.navbar ul li a:hover {
+    background-color: #ff4d4d;
+}
+
+/* Content Styles */
+.content {
+    margin-top: 80px; /* To avoid navbar overlap */
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Card Styles */
+.card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    margin-top: 20px;
+    width: 90%;
+    max-width: 500px;
+    text-align: left;
+}
+
+.card label {
+    font-size: 16px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+/* Ensures the dropdown width matches the text boxes */
+.card input,
+.card select {
+    width: 95%; /* Same width as text boxes */
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Styling for the result display */
+.result {
+    background-color: #FFFFFF; /* Light grey background for results */
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 18px;
+    color: #333;
+    margin-top: 20px;
+    text-align: center; /* Center align the result text */
+}
+
+/* Button Styles */
+.card button {
+    padding: 12px;
+    background-color: #cc0000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card button:hover {
+    background-color: #ff4d4d;
+}
+
+/* Footer Styles */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff00    ;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .navbar ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+}

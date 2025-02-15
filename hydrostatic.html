@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hydrostatic Pressure Calculation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Menu -->
+    <div class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="hydrostatic.html">Hydrostatic Pressure</a></li>
+            <li><a href="shale_shaker.html">Shale Shaker G-Force</a></li>
+            <li><a href="hydrocyclone.html">Hydrocyclone G-Force</a></li>
+            <li><a href="centrifuge.html">Centrifuge G-Force</a></li>
+            <li><a href="retort.html">Retort</a></li>
+        </ul>
+    </div>
+
+    <!-- Page Content -->
+    <div class="content">
+        <h1>Hydrostatic Pressure Calculation</h1>
+        <div class="card">
+            <label for="mudWeight">Mud Weight (ppg):</label>
+            <input type="number" id="mudWeight" placeholder="Enter mud weight in ppg">
+            <br><br>
+            <label for="distance">Distance (ft):</label>
+            <input type="number" id="distance" placeholder="Enter distance in ft">
+            <br><br>
+            <button onclick="calculateHydrostaticPressure()">Calculate Hydrostatic Pressure</button>
+            <div id="result" class="result"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
