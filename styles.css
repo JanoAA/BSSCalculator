@@ -125,13 +125,40 @@ h1 {
 
 /* Mobile Styles */
 @media (max-width: 768px) {
+    .navbar ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .content {
+        padding: 10px;
+    }
+
     .card {
         width: 100%;
         margin-top: 10px;
     }
 
-    .navbar ul li {
-        display: block;
-        margin-bottom: 10px;
+    .card input,
+    .card select,
+    .card button {
+        width: 100%; /* Ensures inputs and buttons take full width on small screens */
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+}
+
+/* Image Styling for Mobile */
+@media (max-width: 768px) {
+    .card img {
+        width: 100%; /* Make image responsive */
+        height: auto;
+        margin-top: 10px;
     }
 }
