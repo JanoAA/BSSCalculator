@@ -62,11 +62,13 @@ h1 {
 /* Card Styles */
 .card {
     background-color: white;
-    padding: 30px;
+    padding: 35px;
+    padding-left: 40px;
+    padding-right: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     display: inline-block;
-    margin-top: 20px;
+    margin-top: 20px;    
     width: 90%;
     max-width: 500px;
     text-align: left;
@@ -81,11 +83,12 @@ h1 {
 /* Ensures the dropdown width matches the text boxes */
 .card input,
 .card select {
-    width: 95%; /* Same width as text boxes */
-    padding: 10px;
+    width: 95%; /* Adjust width to 100% to make it more responsive */
+    padding: 12px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    box-sizing: border-box; /* Ensures padding and borders are included in the width calculation */
 }
 
 /* Styling for the result display */
@@ -107,6 +110,7 @@ h1 {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    width: 95%; /* Make buttons full-width */
 }
 
 .card button:hover {
@@ -117,7 +121,7 @@ h1 {
 .footer {
     text-align: center;
     padding: 20px;
-    background-color: #ffffff00    ;
+    background-color: #ffffff00;
     position: fixed;
     width: 100%;
     bottom: 0;
@@ -125,24 +129,34 @@ h1 {
 
 /* Mobile Styles */
 @media (max-width: 768px) {
+    /* Navbar: Change layout for mobile */
+    .navbar ul {
+        padding: 0;
+        display: block;
+    }
+
     .navbar ul li {
         display: block;
         margin-bottom: 10px;
+        text-align: center;
     }
 
+    /* Content area: Center and give some space between sections */
     .content {
-        padding: 10px;
+        padding: 15px;
+        margin-top: 200px; /* Adjust margin to ensure content starts below the navbar */
     }
 
     .card {
-        width: 100%;
         margin-top: 10px;
+        width: 100%;
+        padding: 20px; /* Reduce padding for better mobile display */
     }
 
     .card input,
     .card select,
     .card button {
-        width: 100%; /* Ensures inputs and buttons take full width on small screens */
+        font-size: 16px;
     }
 
     h1 {
@@ -154,11 +168,25 @@ h1 {
     }
 }
 
-/* Image Styling for Mobile */
-@media (max-width: 768px) {
-    .card img {
-        width: 100%; /* Make image responsive */
-        height: auto;
-        margin-top: 10px;
+/* For even smaller devices (Phones in portrait mode) */
+@media (max-width: 480px) {
+    .card {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .card input,
+    .card select,
+    .card button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 20px; /* Make h1 smaller on very small screens */
+    }
+
+    .description {
+        font-size: 14px;
     }
 }

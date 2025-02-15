@@ -23,14 +23,42 @@
     <div class="content">
         <h1>Retort Calculation</h1>
         <div class="card">
-            <label for="sampleWeight">Sample Weight (grams):</label>
-            <input type="number" id="sampleWeight" placeholder="Enter sample weight">
+            <label for="sampleType">Sample Type:</label>
+            <select id="sampleType">
+                <option value="50cc">50cc</option>
+                <option value="10cc">10cc</option>
+            </select>
             <br><br>
-            <label for="oilContent">Oil Content (%):</label>
-            <input type="number" id="oilContent" placeholder="Enter oil content percentage">
+            
+            <label for="oilVolume">Oil Volume (ml):</label>
+            <input type="number" id="oilVolume" placeholder="Enter oil volume in ml">
             <br><br>
-            <button onclick="calculateRetort()">Calculate Oil Weight</button>
-            <div id="result" class="result"></div>
+            
+            <label for="waterVolume">Water Volume (ml):</label>
+            <input type="number" id="waterVolume" placeholder="Enter water volume in ml">
+            <br><br>
+            
+            <label for="cellWeightWithSample">Cell Weight with Sample (g):</label>
+            <input type="number" id="cellWeightWithSample" placeholder="Enter cell weight with sample">
+            <br><br>
+
+            <label for="emptyCellWeight">Empty Cell Weight (g):</label>
+            <input type="number" id="emptyCellWeight" placeholder="Enter empty cell weight">
+            <br><br>
+
+            <label for="cylinderWeightEmpty">Cylinder Weight Empty (g):</label>
+            <input type="number" id="cylinderWeightEmpty" placeholder="Enter cylinder weight empty">
+            <br><br>
+
+            <label for="cylinderWeightWithCondensate">Cylinder Weight with Condensate (g):</label>
+            <input type="number" id="cylinderWeightWithCondensate" placeholder="Enter cylinder weight with condensate">
+            <br><br>
+
+            <button onclick="calculateVolume()">Calculate Volume</button>
+            <br><br>
+            <button onclick="calculateWeight()">Calculate Weight</button>
+            <br><br>
+            <div id="result"></div>
         </div>
     </div>
 
